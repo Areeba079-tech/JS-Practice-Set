@@ -86,5 +86,24 @@ function handleObjet(anyobject){
  console.log(b);
  console.log(c);
 
+// ============== instersting way to define function =======
+// hoisting 
+
+addone(2)// if we define function simply then we can access it anywhere even before the definition of the function 
+
+function addone (num){
+    return num+1;
+
+}
+// expression 
+// addTwo(2) ======= error 
+//  if we define function and then store it in a varibale then it will through an error 
+//  functions in this way are inaccessible before the definition 
+const addTwo= function (num){
+    return num+2
+
+}
+
+addTwo(2)
 
 
