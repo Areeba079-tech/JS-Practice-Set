@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:black ; color:white;">
+    <!-- <div class="bg-black">
+        <h1 id="title" class="heading">Self learn
+            <span style="display:none">
+                test text 
+            </span>
+        </h1>
+        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam odio fuga porro.</h2>
+        <h2>Lorem.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia sequi dolore consequatur hic fugit corporis, quos quo consequuntur, distinctio totam inventore harum, delectus ea eum explicabo? Harum ducimus suscipit voluptate necessitatibus? Itaque!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptates ullam reiciendis, harum quas recusandae quidem, dicta veritatis, mollitia eaque voluptatibus nulla perferendis. Eum ut fugiat, nesciunt inventore beatae deleniti?</p>
+        
+    
+    </div> -->
+
+<body>
+    
+
+    <div class="parent">
+<div class="day">Monday</div>
+<div class="day">Tuesday</div>
+<div class="day">wednesday</div>
+<div class="day">thursday</div>
+
+
+    </div>
+
+</body>
+<script>
+    // moving from parent to child 
+    const parent=document.querySelector('.parent')
+    console.log(parent)
+    console.log(parent.children)// returns html collection 
+    console.log(parent.children[1].innerHTML)
+    // classic for loops can be used for the iterations over the html collections 
+    for (let i = 0; i < parent.children.length; i++) {
+      
+        // console.log(parent.children[i].innerHTML)
+    parent.children[i].style.backgroundColor="orange";
+
+}
+
+console.log(parent.firstElementChild);
+console.log(parent.lastElementChild);
+
+
+
+//  moving from child to parent 
+
+const dayOne= document.querySelector('.day');
+console.log(dayOne);
+console.log(dayOne.parentElement);// returns parent of that child 
+console.log(dayOne.nextElementSibling);// returns next sibling 
+console.log("Nodes: ", parent.childNodes);
+
+// childnodes returns everythings including the line breaks , comments in our html code 
+
+
+
+
+</script>
+</html>
+
