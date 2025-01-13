@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   
+
+<body style="background-color: grey; color:white;">
+    
+<ul class="language">
+    <li>JavaScript</li>
+</ul>
+   
+
+</body>
+<script>
+// ======================================================
+//  adding elements - adding an element by create a compleet node 
+function addLanguage(langName)
+{
+    const li=document.createElement('li');
+    const innerTEXT=document.createTextNode(`${langName}`);
+    li.appendChild(innerTEXT);
+
+    const parent=document.querySelector('.language');
+
+    parent.appendChild(li);
+
+
+}
+addLanguage("python")
+addLanguage("Rubby")
+
+//  ===========Edit elements ==========
+
+//  example 1- replacing a complete element 
+const language=document.querySelector("li:nth-child(2)");
+const newLi=document.createElement("li");
+// newLi.innerHTML="mojo"; not optimized
+
+newLi.textContent="MOjo";
+
+language.replaceWith(newLi);// replaced mojo with python 
+
+//  example 2 - directly changing the html 
+const newLang=document.querySelector("li:nth-child(1)")
+newLang.outerHTML='<li>TypeScript</li>';
+
+
+// ========= Remove =========
+
+const lastlang=document.querySelector("li:last-child");
+lastlang.remove();
+
+
+
+
+</script>
+</html>
+
