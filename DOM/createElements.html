@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:black ; color:white;">
+   
+
+<body>
+    
+
+   
+
+</body>
+<script>
+    
+
+// ======================================================
+//  create elements 
+
+const div=document.createElement('div');
+console.log(div);
+div.className="main";// over writes the previous class names if present 
+div.id=Math.round(Math.random()*10+1);// assigning ids randomly 
+div.setAttribute("title","generted from js ");
+// styling 
+div.style.backgroundColor="green";
+div.style.padding="12px";
+//  attaching this new element to the html document 
+
+div.innerText="chai or code ";// over writes the previous code 
+
+//  as inner text will over write the previous text so it is preffered to create a seperate node for text and then attach it with the code 
+const newText= document.createTextNode("Chai or code");
+div.appendChild(newText);
+document.body.appendChild(div)
+
+
+
+
+
+</script>
+</html>
+
