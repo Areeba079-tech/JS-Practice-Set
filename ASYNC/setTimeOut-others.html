@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1> Practice my JS</h1>
+   <button id="stop">STOP</button>
+
+</body>
+<script>
+
+// setTimeout(), setintervel (), clearTimeout(),clearInterval()
+// it is a method which calls an API
+//  these functions are not core functions , these are available through browser 
+ 
+// ==========set Time Out============
+//  setTime out requires a handler 
+//  it is function (call back ) without a name 
+//or may be this is function written somewhere else and we are just referencing it inside the setTimeout
+
+// method 1
+setTimeout(function(){
+    console.log("hey i am areeba")
+},2000)// will do something after 2 seconds for one time 
+
+// method 2
+const greetings=function(){
+    console.log("hey i am areeba")
+}
+setTimeout(greetings,2000)
+
+
+//  example 2 
+//  change text after 2 seconds
+
+const ChangeText=function(){
+    const element=document.querySelector('h1');
+    element.innerHTML="I am gonna master it very soon";
+
+}
+const ChagneMe=setTimeout(ChangeText,2000);//  settimeIntervel 
+//  it will run the function continousuly after the set intervel 
+
+// if we want to stop the event before calling it before a settled time then 
+
+document.querySelector('#stop').addEventListener('click',function(e){
+    clearTimeout(ChagneMe);// it gets the refernce of the settimeout , which we want to stop 
+      console.log("stopped")
+})
+
+
+
+
+</script>
+</html>
