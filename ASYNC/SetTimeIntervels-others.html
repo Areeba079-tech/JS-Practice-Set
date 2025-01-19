@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1> Practice my JS</h1>
+   <button id="start">START</button>
+   <button id="stop">STOP</button>
+
+
+</body>
+<script>
+// ==========Set intervel===========
+//  method 1 
+
+// setInterval(function(){
+//     console.log("areeba",Date.now());
+
+// },1000)
+
+// method 2 
+const func=function(){
+    console.log("areeba",Date.now());
+
+};
+const stopAreeba=setInterval(func,1000);
+
+// method 3
+
+//  passing arguments 
+const sayDate=function(str){
+    console.log(str,Date.now());
+
+}
+
+const intervelID= setInterval(sayDate,1000,"Areeba");
+
+
+//  clear intervel 
+clearInterval(intervelID);
+clearInterval(stopAreeba);
+
+
+
+
+</script>
+</html>
